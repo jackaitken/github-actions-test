@@ -14,6 +14,5 @@ runs:
   using: "composite"
   steps:
     - name: "Time to echo some stuff"
-    - run: | 
-        echo This message is for ${{ inputs.name }}, ${{ inputs.message }}
+      run: echo "This message is for ${{ inputs.name }}, ${{ inputs.message }}"
       shell: bash
