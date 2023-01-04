@@ -1,0 +1,18 @@
+name: "Echo something"
+description: "Echo something to test calling action from another repo"
+inputs:
+  message:
+    description: "The message that we're going to echo out"
+    default: "This is the default message"
+    required: true
+  name:
+    description: "The person to whom we should address our message"
+    default: "First Last"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: "Time to echo some stuff"
+    - run: echo "This message is for ${{ inputs.name }}, ${{ inputs.message }}"
+      shell: bash
