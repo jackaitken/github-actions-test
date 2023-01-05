@@ -15,5 +15,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo "This message is for ${{ inputs.name }}: ${{ inputs.message }}"
+    - run: echo "This message is for ${{ inputs.name }}':' ${{ inputs.message }}"
       shell: bash
